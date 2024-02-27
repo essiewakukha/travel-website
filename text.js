@@ -15,13 +15,13 @@ window.onscroll = () =>{
 
 }
 
-/*var swiper = new Swiper(".home-slider", {
+var swiper = new Swiper(".home-slider", {
 	loop:true,
       navigation: {
         Nextel: ".swiper-button-next",
         prevEl:".swiper-button-prev"
       },
-    });*/
+    });
 
 
 var swiper = new Swiper(".home-slider", {

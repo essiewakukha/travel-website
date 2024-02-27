@@ -32,6 +32,9 @@ html::webkit-scrollbar-thumb{
 section{
 	padding: 5rem 10%;
 }
+	.home .slide .content h3{
+		font-size: 10vw;
+	}
 
 @keyframes fadein{
 	0%{
@@ -39,6 +42,26 @@ section{
 		transform: scale(.5);
 		opacity: 0;
 	}
+}
+
+.heading{
+	background-size: cover !important;
+	background-position: center !important;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.heading h1{
+	font-size: 10rem;
+	text-transform: uppercase;
+	color: var(--white);
+	text-shadow: var(--text-shadow);
+	 
+
+
 }
 .btn{
 	display: inline-block;
@@ -125,7 +148,7 @@ padding: 0;
 	
 
 }
-.home.swiper-slider-active.content{
+.home.swiper-slider-active .content{
 	display: inline-block;
 }
 .home .slide .content span{
@@ -208,12 +231,155 @@ font-size: 2rem;
 	padding-top: 1rem;
 }
 
+/*about section starts*/
+
+.home-about{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.home-about .image{
+	flex: 1 1 41rem;
+}
+.home-about .image img{
+	width: 100%;
+	
+	
+
+}
+.home-about .content{
+	flex: 1 1 41rem;
+	padding: 2rem;
+	background: var(--light-bg);
+}
+.home-about .content h3{
+	font-size: 3rem;
+	color: var(--black);
+}
+.home-about .content p{
+	font-size: 1.5rem;
+	padding: 1rem 0;
+	line-height: 2.5rem;
+	color: var(--black);
+
+
+	
+}
 
 
 
+/*about section ends*/
+
+
+/*home package section starts*/
+.home-packages{
+	background: var(--light-bg);
+	box-shadow: var(--box-shadow);
+	background: var(--white);
+}
+.home-packages .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 2rem;	
+}
+.home-packages .box-container .box {
+	border:var(--border) ;
+}
+.home-packages .box-container .box .image{
+	height:25rem;
+	overflow: hidden;
+	 
+}
+.home-packages .box-container .box .image img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: .2s linear;
+
+}
+.home-packages .box-container .box .content{
+	padding: 2rem;
+	text-align: center;
+} 
+.home-packages .box-container .box .content h3{
+	font: size 2.5rem; 
+	color: var(--black);
+
+
+}
+.home-packages .box-container .box .content p{
+	font: size 1.5rem; 
+	color: var(--light-black);
+	line-height: 2;
+}
+
+.home-packages .load-more{
+	text-align: center;
+	margin-top: 2rem;
+}
+/*home package section ends*/
+
+
+/*home offer section*/
+
+.home-offer{
+	text-align: center;
+}
+.home-offer .content{
+
+	max-width: 50rem;
+	margin: 0 auto;
+
+}
+.home-offer .content h3{
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	color: var(--black);
+
+}
+.home-offer .content p{
+	font-size: 1.5rem;
+	color:var(--light-black)
+	;line-height: 2;
+	padding: 1rem 0; 
+}
+/*home offer section*/
 
 
 
+/* about page*/
+
+#about{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 3rem;
+}
+#about .image {
+	flex: 1 1 41rem;
+}
+#about .image img{
+	width: 100%;
+}
+
+#about .content{
+	flex: 1 1 41rem;
+	text-align: center;
+	
+
+}
+#about .content h3{
+	font-size: 3rem;
+	color: var(--black);
+
+
+}
+#about .content p{ 
+	font-size: 1.5rem;
+	color: var(--black);
+	line-height: 2;
+	padding: 1rem 0;
+ }
 
 
 
@@ -305,6 +471,9 @@ font-size: 2rem;
 	section{
 
 		padding: 3rem 2rem;
+	}
+	.home .slide .content h3{
+		font-size: 10vw;
 	}
 
 
