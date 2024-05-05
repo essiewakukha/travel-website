@@ -16,19 +16,53 @@ window.onscroll = () =>{
 }
 
 var swiper = new Swiper(".home-slider", {
-	loop:true,
-      navigation: {
-        Nextel: ".swiper-button-next",
-        prevEl:".swiper-button-prev"
+  
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+    var swiper = new Swiper(".reviews-slider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoHeight:true,
+      grabCursor:true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+          
+        },
       },
     });
 
+    let loadMoreBtn = document.querySelector('#packages .load-more .btn');
+    let currentItem = 3
 
-var swiper = new Swiper(".home-slider", {
-loop:true,
-     
-      navigation: {
-        nextel: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+    loadMoreBtn.onclick =() =>{
+      let boxes = [...document.querySelectorAll('#packages .box-container .box')]
+      for (var i = currentItem; i<currentItem +3; i++){
+        boxes[i].style.display ='inline.block'
+      }
+
+      currentItem += 3
+      if( currentItem >= boxes.length){
+        loadMoreBtn.style.display = 'none'
+      }
+    }

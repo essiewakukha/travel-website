@@ -274,8 +274,7 @@ font-size: 2rem;
 /*home package section starts*/
 .home-packages{
 	background: var(--light-bg);
-	box-shadow: var(--box-shadow);
-	background: var(--white);
+	
 }
 .home-packages .box-container{
 	display: grid;
@@ -284,11 +283,17 @@ font-size: 2rem;
 }
 .home-packages .box-container .box {
 	border:var(--border) ;
+	box-shadow: var(--box-shadow);
+	background: var(--white);
+	
 }
 .home-packages .box-container .box .image{
 	height:25rem;
 	overflow: hidden;
 	 
+}
+.home-packages .box-container .box:hover .image img{
+	transform: scale(1.1);
 }
 .home-packages .box-container .box .image img{
 	height: 100%;
@@ -302,13 +307,13 @@ font-size: 2rem;
 	text-align: center;
 } 
 .home-packages .box-container .box .content h3{
-	font: size 2.5rem; 
+	font-size: 2.5rem; 
 	color: var(--black);
 
 
 }
 .home-packages .box-container .box .content p{
-	font: size 1.5rem; 
+	font-size: 1.5rem; 
 	color: var(--light-black);
 	line-height: 2;
 }
@@ -376,16 +381,211 @@ font-size: 2rem;
 }
 #about .content p{ 
 	font-size: 1.5rem;
-	color: var(--black);
+	color: var(--light-black);
+	line-height: 2;
+	padding: 1rem 0;
+ }
+ #about .content .icons-container{
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	align-items: flex-end;
+ }
+ #about .content .icons-container .icons{
+	background: var(--light-bg);
+	padding:2rem;
+	flex: 1 1 16rem;
+ }
+ #about .content .icons-container .icons i{
+	font-size: 4rem;
+	margin-bottom: 2rem;
+	color: var(--main-color);
+
+ }
+ #about .content .icons-container .icons span{
+	font-size: 1.5rem;
+	color: var(--light-black);
+	display: block;
+	
+ }
+ /*reviews section*/
+
+
+
+ #reviews{
+	background: var(--light-bg);
+ }
+
+ #reviews .slide{
+	padding: 2rem;
+	border: var(--border);
+	background: var(--white);
+	text-align: center;
+	box-shadow: var(--box-shadow);
+	user-select: none;
+ }
+
+ #reviews .slide .star{
+ 	padding-bottom: .5rem;
+ }
+ #reviews .slide .stars i{
+	font-size: 1.7rem;
+	color: var(--main-color);
+
+ }
+ #reviews .slide .p{
+	font-size: 1.5rem;
+	color: var(--light-black);
 	line-height: 2;
 	padding: 1rem 0;
  }
 
+ #reviews .slide h3{
+	font-size: 2rem;
+	color: var(--black);
+
+ }
+ #reviews .slide span{
+	font-size: 1.5rem;
+	color: var(--main-color);
+	display: block;
+ }
+
+ #reviews .slide img{
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	margin-top: 1rem;
+ }
+ /*reviews section ends*/
+
+
+/* packages page starts*/
+#packages{
+	background: var(--light-bg);
+	
+	
+	
+}
+
+
+
+
+	
+
+
+
+#packages .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 2rem;	
+}
+#packages .box-container .box {
+	border:var(--border) ;
+	box-shadow: var(--box-shadow);
+	background: var(--white);
+	display: none;
+}
+#packages .box-container .box:nth-child(1),
+#packages .box-container .box:nth-child(2),
+#packages .box-container .box:nth-child(3),
+#packages .box-container .box:nth-child(4),
+#packages .box-container .box:nth-child(5),
+#packages .box-container .box:nth-child(6){
+display:inline-block;
+}
+#packages .box-container .box .image{
+	height:25rem;
+	overflow: hidden;
+	 
+}
+#packages .box-container .box:hover .image img{
+	transform: scale(1.1);
+}
+#packages .box-container .box .image img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: .2s linear;
+
+}
+#packages .box-container .box .content{
+	padding: 2rem;
+	text-align: center;
+} 
+#packages .box-container .box .content h3{
+	font-size: 1.3rem; 
+	color: var(--black);
+
+
+}
+#packages .box-container .box .content p{
+	font-size:  1.2rem; 
+	color: var(--light-black);
+	line-height: 2;
+}
+
+#packages .load-more{
+	text-align: center;
+	margin-top: 2rem;
+}
 
 
 
 
 
+/*package page ends*/
+
+/*booking page starts*/
+
+.booking .book-form{
+padding: 2rem;
+background: var(--light-bg);
+
+}
+.booking .book-form .flex{
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+
+
+}
+.booking .book-form .flex .inputBox{
+	flex: 1 1 41rem;
+}
+.booking .book-form .flex .inputBox input{
+width: 100%;
+padding: 1.3rem 1.4rem;
+font-size: 1.6rem;
+color: var(--light-black);
+text-transform: none;
+margin-top: 1.5rem;
+border: var(--border);
+
+
+
+
+}
+.booking .book-form .flex .inputBox input:focus{
+	background: var(--black);
+	color: var(--white);
+
+}
+.booking .book-form .flex .inputBox input:focus::placeholder{
+	background: var(--black);
+	color: var(--light-white);
+}
+.booking .book-form .flex .inputBox  span{
+	font-size: 1.5rem;
+	color: var(--light-black);
+
+
+}
+.booking .book-form .btn{
+	margin-top: 2px;
+}
+/*booking page ends*/
 
 
 
